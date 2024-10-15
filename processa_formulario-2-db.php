@@ -147,13 +147,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->isSMTP();
             $mail->Host       = 'mail.embrafer.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'adm@futgrass.com.br';
+            $mail->Username   = 'futgrass@futgrass.com.br';
             $mail->Password   = 'Futgrass80802!'; // **ATENÇÃO:** Alterar imediatamente
             $mail->SMTPSecure = 'tls';
             $mail->Port       = 587;
 
             // Remetente e destinatário
-            $mail->setFrom('adm@futgrass.com.br', 'FUTGRASS');
+            $mail->setFrom('futgrass@futgrass.com.br', 'FUTGRASS');
             $mail->addAddress('contato@futgrass.com.br', 'FUTGRASS');
 
             // Conteúdo do e-mail
