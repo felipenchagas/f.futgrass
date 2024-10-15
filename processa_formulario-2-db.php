@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!empty($honeypot)) {
         // Submissão suspeita de bot
         error_log("Honeypot detectado. Submissão bloqueada.");
-        header('Location: https://estruturametalicasc.com.br/sucesso');
+        header('Location: https://futgrass.com.br/sucesso');
         exit();
     }
 
@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($form_loaded_at == 0 || $time_diff < 5) {
         error_log("Submissão suspeita de bot. Tempo de submissão muito rápido.");
-        header('Location: https://estruturametalicasc.com.br/sucesso');
+        header('Location: https://futgrass.com.br/sucesso');
         exit();
     }
 
@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Content-Type: application/json');
             echo json_encode(['status' => 'error', 'message' => 'Todos os campos são obrigatórios.']);
         } else {
-            header('Location: https://estruturametalicasc.com.br/error');
+            header('Location: https://futgrass.com.br/error');
         }
         exit();
     }
@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Content-Type: application/json');
             echo json_encode(['status' => 'error', 'message' => 'Endereço de e-mail inválido.']);
         } else {
-            header('Location: https://estruturametalicasc.com.br/error');
+            header('Location: https://futgrass.com.br/error');
         }
         exit();
     }
@@ -147,19 +147,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->isSMTP();
             $mail->Host       = 'mail.embrafer.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'contato@estruturametalicasc.com.br';
+            $mail->Username   = 'adm@futgrass.com.br';
             $mail->Password   = 'Futgrass80802!'; // **ATENÇÃO:** Alterar imediatamente
             $mail->SMTPSecure = 'tls';
             $mail->Port       = 587;
 
             // Remetente e destinatário
-            $mail->setFrom('contato@estruturametalicasc.com.br', 'ESTRUTURA SC');
-            $mail->addAddress('contato@estruturametalicasc.com.br', 'ESTRUTURA SC');
+            $mail->setFrom('contato@futgrass.com.br', 'FUTGRASS');
+            $mail->addAddress('contato@futgrass.com.br', 'FUTGRASS');
 
             // Conteúdo do e-mail
             $mail->isHTML(true);
             $mail->CharSet = 'UTF-8';
-            $mail->Subject = 'Novo Contato - Site ESTRUTURA SC Empresarial';
+            $mail->Subject = 'Novo Contato - Site FUTGRASS Empresarial';
             $mail->Body    = "
                 <html>
                 <body>
@@ -179,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->send();
 
             error_log("E-mail enviado com sucesso.");
-            header('Location: https://estruturametalicasc.com.br/sucesso');
+            header('Location: https://futgrass.com.br/sucesso');
             exit();
         } catch (Exception $e) {
             error_log("Erro ao enviar e-mail: " . $e->getMessage());
@@ -187,7 +187,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header('Content-Type: application/json');
                 echo json_encode(['status' => 'error', 'message' => 'Erro ao enviar e-mail.']);
             } else {
-                header('Location: https://estruturametalicasc.com.br/error');
+                header('Location: https://futgrass.com.br/error');
             }
             exit();
         }
@@ -207,7 +207,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header('Content-Type: application/json');
         echo json_encode(['status' => 'error', 'message' => 'Método de requisição inválido.']);
     } else {
-        header('Location: https://estruturametalicasc.com.br/error');
+        header('Location: https://futgrass.com.br/error');
     }
     exit();
 }
