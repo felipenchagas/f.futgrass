@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Remetente e destinatário
             $mail->setFrom('futgrass@futgrass.com.br', 'FUTGRASS');
-            $mail->addAddress('contato@futgrass.com.br', 'FUTGRASS');
+            $mail->addAddress('futgrass@futgrass.com.br', 'FUTGRASS');
 
             // Conteúdo do e-mail
             $mail->isHTML(true);
