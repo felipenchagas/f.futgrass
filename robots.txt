@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /gramasinteticaguarulhos.com.br
+Disallow: /gramasinteticalondrina.com.br
+Disallow: /gramasinteticamaringa.com.br
+Disallow: /gramasinteticaosasco.com.br
+Disallow: /gramasinteticapontagross.com.br
+Disallow: /gramasintetica.com
+Disallow: /realturf.com.br
+Disallow: /gramasintetica.com
+Disallow: /novo
+Disallow: /novo2

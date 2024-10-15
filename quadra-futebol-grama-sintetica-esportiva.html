@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Construir quadra de futebol grama sintética</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Construir quadra de futebol com grama sintética, valores, a Futgrass auxilia constrói sua quadra do começo ao fim (41) 3082-8850.">
+	<meta name="author" content="Empresarial Web" />
+	<meta name="robots" content="index, all"/>
+<meta name="robots" content="index, follow"/>
+<meta name="Googlebot" content="index, follow"/>
+<meta name="MSNBot" content="index,all" />
+<meta name="yahooBot" content="index,all" />
+<meta name="expires" content="never" />
+<meta name="distribution" content="Global" />
+<meta name="revisit-after" content="7" />>
+<meta name="category" content="soccer"/>
+<meta name="service" content="construction" />
+<meta name="category" content="construction"/>
+
+<meta name="country" content="all" />
+<meta name="coverage" content="Worldwide" />
+<meta name="dc.language" content="br" />
+<meta name="geo.region" content="BR-PR" />
+<meta name="geo.placename" content="Curitiba" />
+<meta name="geo.position" content="-25.4477824;-49.3213937,12" />
+<meta name="ICBM" content="-25.4477824;-49.3213937,12" />
+
+
+		    <link href="stylesheets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/SpryValidationTextarea.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/SpryValidationSelect.css" rel="stylesheet" type="text/css" />
+	    <link href="stylesheets/estilo.css" rel="stylesheet" type="text/css" />
+        <!-- Le styles -->
+        <link href="stylesheets/bootstrap.css" rel="stylesheet">
+        <link href="stylesheets/responsive.css" rel="stylesheet">
+        <link href="js/rs-plugin/css/settings.css" rel="stylesheet">
+        <link href="stylesheets/main.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon/114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon/114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon/72x72.png">
+        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon/57x57.png">
+        <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="stylescontato.css"><link rel="stylesheet" href="stylescontato.css"></head>
+
+    <body>
+<div class="floating-button">
+  <button id="openModalBtn">Solicitar Orçamento</button>
+</div>
+
+
+<!-- Modal -->
+  <div id="contactModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Solicitar Orçamento</h2>
+        
+        <form action="processa_formulario.php" method="post" id="contact-form">
+          <div class="input-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required pattern="[A-Za-zÀ-ÿ\s]+" title="Somente letras são permitidas">
+          </div>
+          
+          <div class="input-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+          </div>
+          
+          <div class="input-group">
+            <label for="telefone">Telefone</label>
+            <div class="phone-fields">
+              <input type="text" id="ddd" name="ddd" placeholder="DDD" maxlength="2" required pattern="\d{2}" title="Somente números são permitidos">
+              <input type="text" id="telefone" name="telefone" placeholder="Número" maxlength="9" pattern="\d{9}" title="Somente números são permitidos" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="input-group cidade">
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required pattern="[A-Za-zÀ-ÿ\s]+" title="Somente letras são permitidas">
+            </div>
+            <div class="input-group estado">
+              <label for="estado">Estado</label>
+              <input type="text" id="estado" name="estado" placeholder="Digite" maxlength="2" pattern="[A-Za-z]{2}" title="Apenas 2 letras são permitidas" required>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="descricao">Descrição do Orçamento</label>
+            <textarea id="descricao" name="descricao" placeholder="Descreva o serviço ou estrutura metálica que deseja orçar" required></textarea>
+          </div>
+          
+          <!-- Campo Honeypot escondido -->
+          <div style="display:none;">
+            <label for="honeypot">Não preencha este campo se for humano:</label>
+            <input type="text" id="honeypot" name="honeypot">
+          </div>
+          
+          <!-- Campo Oculto para o Temporizador -->
+          <input type="hidden" id="form_loaded_at" name="form_loaded_at" value="">
+          
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+        <!-- STYLESWITCHER HTML -->
+
+        <!-- /STYLESWITCHER HTML -->
+
+        <div class="boxed-container">
+
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-head">
+                    <div class="container">
+                        <div class="header-padding" id="shrinkableHeader">
+                            <div class="row">
+                                <div class="span6">
+                                    <a class="brand" href="index.html" title=""><img src="images/logo.gif" alt="Logo Futgrass"></a>
+                                </div>
+                                <div class="span6">
+                                    <div class="pull-right">
+                                        <div class="call-us">
+                                            CONTATO: (41) 3082-8850
+                                        </div>
+                                        <div class="social">
+                                            <span><a href="https://www.linkedin.com/company/futgrass" class="social-icon-linkedin"></a></span>
+                                            <span><a href="https://www.facebook.com/futgrassgramasintetica" class="social-icon-facebook"></a></span>
+                                            <span><a href="https://www.youtube.com/channel/UC1o47rkgPrYIXjr7dy7LhgA" class="social-icon-youtube"></a></span>
+                                            <span><a href="https://vimeo.com/user38657692" class="social-icon-vimeo"></a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="navbar-menu-line">
+                    <div class="container">
+                        <button type="button" class="btn btn-navbar btn-green" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav" id="mainNavigation">
+                                <li class="divider-vertical"></li>
+                                <li class="dropdown active">
+                                    <a href="index.html"><span>Início</span></a></li>
+
+                                <li class="divider-vertical"></li>
+                                <li>
+                                    <a href="empresa-futgrass.html"><span>Empresa</span><small>melhor atendimento</small></a>
+                                </li>
+                                <li class="divider-vertical"></li>
+                                <li class="dropdown">
+                                    <a href="#"><span>Produtos</span><small>qualidade garantida</small></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="grama-sintetica.html">Grama Sintética</a></li><li><a href="quadra-futebol-grama-sintetica-esportiva.html">Futebol Society</a></li>
+                                        <li>
+                                            <a href="grama-sintetica-esportiva.html">Grama Sintética Esportiva</a>
+                                        </li>
+                                        <li>
+                                            <a href="grama-sintetica-decorativa.html">Grama Sintética Decorativa</a>
+                                        </li>
+                                        <li>
+                                            <a href="alambrado-protecao.html">Alambrados</a>
+                                        </li>
+                                        <li>
+                                            <a href="iluminacao-esportiva-futebol-quadras.html">Iluminação Esportiva</a>
+                                        </li>
+                                        <li>
+                                            <a href="acessorios-esportivos-futebol-volei-basquete.html">Acessorios Esportivos</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="divider-vertical"></li>
+                                <li class="dropdown">
+                                    <a href="http://www.futgrass.com.br/galeria" class="dropdown-toggle"><span>Portfólio</span><small>obras concluídas</small></a>
+
+                                </li>
+                                <li class="divider-vertical"></li>
+                                <li class="dropdown">
+                                    <a href="grama-sintetica-profissional-futebol-empresa.html" class="dropdown-toggle"><span>Grama sintética</span><small>alto padrão</small></a></li>
+                                <li class="divider-vertical"></li>
+                                <li>
+                                    <a href="contato.html"><span>Contato</span><small>aguardando você</small></a>
+                                </li>
+                            </ul>
+
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+    	
+            <div class="fullwidthbanner-subpage-container img-slide img-sub-01">
+
+                <div class="parallax-slider">
+                	<div class="container">
+                	    <div class="slide">
+                	        <h1>Construção quadra de Futebol Society com grama sintética esportiva</h1>
+                	        <div class="clearfix"></div>
+                	        <h2>Superior por causa da qualidade,</h2>
+                	        <div class="clearfix"></div>
+                	        <h2>velocidade e profissionalismo.</h2>
+                	    </div>
+                	</div>
+                </div>
+
+            </div>
+            <!-- /fullwidthbanner-container -->
+
+            <div class="container content blog-single">
+
+                <div class="row">
+                    <div class="span9">
+
+                        <div class="row">
+
+                            <div class="span9">
+                                <div class="page-header arrow-grey no-top">
+                                    <div class="row">
+                                        <div class="span5">
+                                            <h2>O futuro do futebol é a grama sintética</h2>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="post">
+                                <div class="span9">
+                                    <div class="row no-bottom">
+                                        <div class="span9 no-bottom">
+                                            <div class="thumbnail thumbnail-portfolio-single">
+                                                <div class="date">
+                                                    <div class="date-circle">
+                                                        <div class="inner-shadow">
+                                                            <span class="date-day">17</span><small>Sep 02</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="picture">
+                                                    <a href="images/gramasintetica/quadra-futebol-grama-sintetica-construir.jpg" class="add-prettyphoto"> <img src="images/gramasintetica/quadra-futebol-grama-sintetica-construir.jpg" alt="Grama sintética quadra de futebol construir" title="Grama sintética quadra de futebol construir"> <span> <span class="plus"><i class="icon-plus"></i></span> </span> </a>
+                                                </div>
+                                                <div class="caption-border-bottom">
+                                                    <div class="caption">
+
+                                                        <div class="thumbnail-arrow"></div>
+                                                        <h3>Um projeto que vale a pena</h3>
+                                                        <div class="meta">
+                                                            
+                                                        </div>
+
+                                                        <div class="row-fluid entry">
+                                                            <div class="span12">
+                                                                <p>
+                                                                    Cada vez mais, investidores estão vendo <strong>construir quadra de futebol society</strong> como um negócio muito lucrativo em 
+																	quase 100% dos casos o valor investido é recuperado no mesmo ano. Os <b>construir um campo de futebol de grama sintética</b> 
+																	torna o negócio muito muito versátil, por que mesmo se chover em caso de quadra descoberta é possível jogar poucas horas depois
+																	de passar a tormenta devido ao ótimo sistema de absorção empregado na <b>quadra de grama sintética</b>. 
+																	
+                                                                    <br />
+                                                                    <br />
+                                                                    Além de um retorno certo e rápido ao escolher por <b>grama artificial</b> você já sai ganhando, por que a manutenção é 
+																	baixíssima não é necessário cortar, regar cuidar para que não se desgaste devido a muitos jogos, tudo isso sem tirar a
+																	sensação de estar jogando na grama natural.
+                                                                    <br />
+                                                                    <br />
+                                                                   A <a href="grama-sintetica-esportiva.html">grama sintética esportiva</a> ganhou seu lugar no mundo do futebol. 
+																   Hoje é padrão na UEFA (campeonato europeu profissional). A nossa grama que empregamos em nossos 
+																   <b>campos de futebol society</b>, é aprovada pela Fifa. 
+																	</p>
+
+                                                                <div class="alert alert-info">
+                                                                    <a href="#orcamento"><button type="button" class="close smooth-close-parent">
+                                                                        <i class="icon-close-light"></i>
+                                                                    </button>
+																	Fazer um orçamento de um <b>campo de futebol</b> society com grama sintética   </a>                                                                 
+                                                                </div>
+
+                                                                <h3>Ótimo investimento</h3>
+
+                                                                <div class="list">
+                                                                    <div class="span6">
+                                                                        <ul>
+                                                                            <li>
+                                                                                Retorno rápido
+                                                                            </li>
+                                                                            <li>
+                                                                                Garantia extendida
+                                                                            </li>
+                                                                            <li>
+                                                                                Fácil administração
+                                                                            </li>
+                                                                            <li>
+                                                                                Futebol Society
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        O esporte que nunca morre
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        Clientes por toda vida
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li>
+                                                                                Vantagens
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+
+                                                                    <div class="span6">
+                                                                        <ul class="styled">
+                                                                            <li>
+                                                                                <a href="#">Retorno rápido do valor investido</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">Pode-se fazer cobertura para ampliar horarios</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">Qualiade Futgrass no seu campo</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">Grama com garantia de 5 anos</a>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <a href="#">Manutenção baixissima</a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="#">Durabilidade para mais de 10 anos</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">Suporte pós venda efetivo</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+
+                                                        
+
+                                                                <p class="post-quote">
+                                                               "Seu tempo é limitado, então não perca tempo vivendo a vida de outro. Tenha coragem de seguir seu coração e intuição. Eles, de alguma forma, já sabem o que você quer se tornar"
+															   </p>
+<a href="#" name="orcamento">.</a>
+                                                            </div>
+
+                                                        </div>
+
+                                                       
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end post -->
+
+                        </div>
+                        <!-- end row -->
+  
+    	
+    	                <div class="row">
+    	
+    	                    <div class="span9">
+    	                        <div class="page-header arrow-grey">
+    	                            <div class="row">
+    	                                <div class="span5">
+    	                                    <h2>Projetos já entregues </h2>
+											
+    	                                </div>
+    	
+    	                            </div>
+    	                        </div>
+    	                    </div>
+    	
+    	                    <div class="portfolio-related">
+    	                    	<div class="span9">
+    	                    	    <div class="row no-bottom">
+	                    	        <div class="span3"><!-- SLIDE DOIS VIZINHOS -->
+    	                    	            <div class="thumbnail"> 
+    	                    	                <div class="picture picture-url-overlay">
+    	                    	                    <div class="carouFredSel four-columns" data-nav="relatedProj1" data-pins="siblings">
+													<!-- SLIDE DOIS VIZINHOS -->
+    	                    	                        <div class="slide">    	                    	                            
+												
+												      
+													 
+													  <a href="images/society/quadra-futebol-dois-vizinhosg.jpg" class="add-prettyphoto">
+													  <img src="images/society/grama-sintetica-dois-vizinhos.jpg" alt="dois vizinhso society" title="dois vizinhso society">
+											<span class="img-overlay" style="z-index:2; height:1px; width:1px; padding: 20px 117px;" >
+												<span class="plus"><i class="icon-plus"></i></span> </span> </a>
+
+
+													  </div>
+    	                    	                        <div class="slide">
+    	                    	                  		 <a href="images/society/quadra-futebol-prontag.jpg" class="add-prettyphoto">
+													<img src="images/society/quadra-futebol-dois-vizinhos.jpg" alt="Grama Sintética quadra dois vizinhos" title="Grama Sintética quadra dois vizinhos">
+												
+											
+												<span class="img-overlay" style="z-index:2; height:1px; width:1px; padding: 20px 117px;" >
+												<span class="plus"><i class="icon-plus"></i></span> </span> </a>
+    	                    	                        </div>
+														
+											 <div class="slide">
+											 <img src="images/society/quadra-futebol-pronta.jpg" class="add-prettyphoto">
+    	                    	          	 <a href="images/society/grama-sintetica-dois-vizinhosg.jpg" alt="Quadra grama sintética" title="Quadra grama sintética" class="add-prettyphoto">
+												
+								
+												<span class="img-overlay" style="z-index:2; height:1px; width:1px; padding: 20px 117px;" >
+												<span class="plus"><i class="icon-plus"></i></span> </span> </a>
+    	                    	               </div>
+														
+														
+    	                    	                    </div>
+    	                    	    	<div class="pins"></div>
+    	                    	                    <span class="img-overlay img-overlay-slider">
+													<span class="slider-left-overlay">
+													<span class="slider-left-overlay-inner" id="relatedProj1Left"></span> </span>
+													<span class="slider-right-overlay"> <span class="slider-right-overlay-inner" id="relatedProj1Right"></span> 
+													</span> </span>
+    	                    	    	
+    	                    	                   
+    	                    	                </div>
+    	                    	                <div class="caption-border-bottom">
+    	                    	                    <div class="caption">
+    	                    	                        <div class="thumbnail-arrow"></div>
+    	                    	                        <h6><a href="#">Quadra em Dois Vizinhos</a></h6>
+    	                    	                    </div>
+    	                    	                </div>
+    	                    	            </div>
+    	                    	        </div>
+										
+										
+										
+										<!-- SLIDE JB CURITIBA -->								
+								
+										<div class="span3">
+    	                    	            <div class="thumbnail"> 
+    	                    	                <div class="picture picture-url-overlay">
+    	                    	                    <div class="carouFredSel four-columns" data-nav="relatedProj2" data-pins="siblings">
+													
+    	                    	                        <div class="slide">    	                    	                            
+												
+												      
+													
+													  <a href="images/society/quadra-jb-societyg.jpg"  class="add-prettyphoto">
+												<img src="images/society/jb-quadra-society-curitiba.jpg" alt="Grama Sintética quadra jb Curitiba" title="Grama Sintética quadra jb Curitiba">
+												<span class="img-overlay" style="z-index:2; height:1px; width:1px; padding: 20px 117px;" >
+												<span class="plus"><i class="icon-plus"></i></span> </span> </a>
+
+
+													  </div>
+    	                    	                        <div class="slide">
+    	                    	                  
+												 <a href="images/society/jb-curitiba-quadra-construir-futebolg.jpg"  class="add-prettyphoto">
+												<img src="images/society/quadra-jb-society.jpg" alt="Quadra grama sintética em Curitiba" title="Quadra grama em Curitiba">
+												
+												<span class="img-overlay" style="z-index:2; height:1px; width:1px; padding: 20px 117px;" >
+												<span class="plus"><i class="icon-plus"></i></span> </span> </a>
+    	                    	                        </div>
+														
+											 <div class="slide">
+    	                    	          
+										  <a href="images/society/jb-quadra-society-curitibag.jpg" class="add-prettyphoto">
+												<img src="images/society/jb-curitiba-quadra-construir-futebol.jpg" alt="Quadra futebol em Curitiba" title="Quadra futebol em Curitiba">
+												<span class="img-overlay" style="z-index:2; height:1px; width:1px; padding: 20px 117px;" >
+												<span class="plus"><i class="icon-plus"></i></span> </span> </a>
+    	                    	               </div>
+														
+														
+    	                    	                    </div>
+    	                    	    	<div class="pins"></div>
+    	                    	                    <span class="img-overlay img-overlay-slider">
+													<span class="slider-left-overlay">
+													<span class="slider-left-overlay-inner" id="relatedProj2Left"></span> </span>
+													<span class="slider-right-overlay"> <span class="slider-right-overlay-inner" id="relatedProj2Right"></span> 
+													</span> </span>
+    	                    	    	
+    	                    	                   
+    	                    	                </div>
+    	                    	                <div class="caption-border-bottom">
+    	                    	                    <div class="caption">
+    	                    	                        <div class="thumbnail-arrow"></div>
+    	                    	                        <h6><a href="#">Society JB em Curitiba</a></h6>
+    	                    	                    </div>
+    	                    	                </div>
+    	                    	            </div>
+    	                    	        </div>	
+										
+	                    	       
+								   
+								   
+								   <!-- BELO HORIZONTE -->					   
+								  <div class="span3">
+    	                    	            <div class="thumbnail">
+
+											
+											<div class="picture picture-url-overlay">
+    	                    	                    <div class="carouFredSel four-columns" data-nav="relatedProj3" data-pins="siblings">
+													
+    	                    	                        <div class="slide">    	                    	                            
+												
+												      
+													
+													  <a href="images/society/quadra-belo-horizonte-societyg.jpg"  class="add-prettyphoto">
+												<img src="images/society/quadra-futebol-em-belo-horizonte.jpg" alt="Grama Sintética quadra jb Curitiba" title="Grama Sintética quadra jb Curitiba">
+												<span class="img-overlay" style="z-index:2; height:1px; width:1px; padding: 20px 117px;" >
+												<span class="plus"><i class="icon-plus"></i></span> </span> </a>
+
+												
+
+													  </div>
+    	                    	                        <div class="slide">
+    	                    	                  
+												 <a href="images/society/quadra-futebol-em-belo-horizonteg.jpg"  class="add-prettyphoto">
+												<img src="images/society/quadra-belo-horizonte-society.jpg" alt="Quadra grama sintética em Curitiba" title="Quadra grama em Curitiba">
+												
+												<span class="img-overlay" style="z-index:2; height:1px; width:1px; padding: 20px 117px;" >
+												<span class="plus"><i class="icon-plus"></i></span> </span> </a>
+    	                    	                        </div>
+														
+
+														
+    	                    	                    </div>
+    	                    	    	<div class="pins"></div>
+    	                    	                    <span class="img-overlay img-overlay-slider">
+													<span class="slider-left-overlay">
+													<span class="slider-left-overlay-inner" id="relatedProj3Left"></span> </span>
+													<span class="slider-right-overlay"> <span class="slider-right-overlay-inner" id="relatedProj3Right"></span> 
+													</span> </span>
+    	                    	    	
+    	                    	                   
+    	                    	                </div>
+											
+											
+    	                    	                <div class="caption-border-bottom">
+    	                    	                    <div class="caption">
+    	                    	                        <div class="thumbnail-arrow"></div>
+    	                    	                        <h6><a href="#">Belo Horizonte</a></h6>
+    	                    	                    </div>
+    	                    	                </div>
+    	                    	            </div>
+    	                    	        </div>
+    	                    	    </div>
+    	                    	</div>
+    	                    </div>
+    	
+    	                </div>
+    	                 
+                      
+                        <!-- end row -->
+
+  
+                        <!-- end row -->
+
+                        <div class="row submit-a-comment">
+
+                            <div class="span9">
+                                <div class="page-header arrow-grey"> <br /><br /><br />
+                                    <h2>Envie seu orçamento</h2>
+                                </div>
+                            </div>
+
+                            <div class="span9">
+                                    <div class="formulario">  
+        
+        <form action="envia.php" method="POST"> <!--  chama o envia.php -->        
+        
+        
+                   
+        <div class="formulario-texto">Nome</div>
+        <div class="formulario-campo">
+        <span id="sprytextfield1">
+        <input type="text" name="nomeremetente" class="textfield-nome"/>
+        <br /><span class="textfieldRequiredMsg">Digite seu nome</span></span></div>
+        
+        
+        <div class="formulario-texto">E-mail</div>
+        <div class="formulario-campo"><span id="sprytextfield2">
+        <input type="text" name="emailremetente" class="textfield-nome"/>
+        <br /><span class="textfieldRequiredMsg">Digite seu e-mail</span>
+        <span class="textfieldInvalidFormatMsg">Formato de e-mail inválido</span></span></div> 
+        
+          
+        
+        
+        <div class="formulario-texto">Telefone</div>
+        <div class="formulario-campo">
+        
+        <span id="sprytextfield3">
+        <input type="text" name="ddd" class="textfield-ddd" />
+        <span class="textfieldRequiredMsg">Digite seu DDD</span>
+        <span class="textfieldInvalidFormatMsg">Digite os 2 números do seu DDD</span>
+        <span class="textfieldMinCharsMsg">Digite os 2 números do seu DDD</span>
+        <span class="textfieldMaxCharsMsg">Digite os 2 números do seu DDD</span></span>
+        
+        <span id="sprytextfield4">
+        <input type="text" name="telefone" class="textfield-telefone" /> <br />
+        <span class="textfieldRequiredMsg">Digite seu telefone</span>
+        <span class="textfieldInvalidFormatMsg">Formato inválido, digite seu telefone como no exemplo: 78872332</span></span></div>
+                                                       
+        
+                      
+        <div class="formulario-texto">Cidade</div>
+        <div class="formulario-campo"><span id="sprytextfield5">
+        <input type="text" name="assunto" class="textfield-nome"/>
+        <br /><span class="textfieldRequiredMsg">Digite o assunto</span></span></div>
+        
+        
+        <div  style="float:left; width:100%;"> </div>
+        <div class="formulario-texto">Mensagem</div>
+        <div class="formulario-campo"><span id="sprytextarea1">
+        <textarea name="mensagem" class="textfield-campo"></textarea>
+        <br /><span class="textareaRequiredMsg">Digite sua mensagem</span></span></div>
+                              
+        <div>
+        <input name="enviar" type="reset" value="Limpar" class="btn-contato-reset"  />
+        <input name="enviar" type="submit" value="Enviar" class="btn-contato-enviar"  />                
+        </div>
+        
+        
+        </form> 
+        
+        </div><!--Fim do Conteudo Paginas-->
+                
+ <!-- Chama validação do formulário -->
+ 
+<script type="text/javascript" src="js/SpryValidationTextField.js" language="javascript" ></script>
+<script type="text/javascript" src="js/SpryValidationTextarea.js" language="javascript" ></script>
+<script type="text/javascript" src="js/SpryValidationSelect.js" language="javascript" ></script>    
+
+<script type="text/javascript">
+
+	var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
+	var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "email");
+	var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3", "integer", {minChars:2, maxChars:2});
+	var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4");	
+	var sprytextfield5 = new Spry.Widget.ValidationTextField("sprytextfield5");
+	var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1");
+
+</script>
+                            </div>
+
+                        </div>
+                        <!-- end row -->
+
+                    </div>
+
+                    <!-- Right Column -->
+
+                    <div class="span3 right-column">
+                        <div class="row">
+
+                            <div class="span3">
+                                <div class="page-header arrow-grey no-bottom-margin">
+                                    <h2>Produtos</h2>
+                                </div>
+                            </div>
+
+                            <div class="span3">
+
+                                <nav class="categories">
+                                    <ul>
+                                                                              <li><a href="grama-sintetica.html">Grama Sintética</a></li><li><a href="quadra-futebol-grama-sintetica-esportiva.html">Futebol Society</a></li>
+                                        <li>
+                                            <a href="grama-sintetica-esportiva.html">Grama Sintética Esportiva</a>
+                                        </li>
+                                        <li>
+                                            <a href="grama-sintetica-decorativa.html">Grama Sintética Decorativa</a>
+                                        </li>
+                                        <li>
+                                            <a href="alambrado-protecao.html">Alambrados</a>
+                                        </li>
+                                        <li>
+                                            <a href="iluminacao-esportiva-futebol-quadras.html">Iluminação Esportiva</a>
+                                        </li>
+                                        <li>
+                                            <a href="acessorios-esportivos-futebol-volei-basquete.html">Acessorios Esportivos</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+
+                        </div>
+                        <!-- end row -->
+						                        <div class="row">
+
+                            <div class="span3">
+                                <div class="page-header arrow-grey">
+                                    <h2>Tudo por Futebol</h2>
+                                </div>
+                            </div>
+
+                            <div class="span3 video-item">
+
+                                <p>
+                                    <iframe src="http://player.vimeo.com/video/123111913?title=0&amp;byline=0&amp;portrait=0&amp;color=15b994" width="226" height="127" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                </p>
+
+                                <p>
+                                    <small>Futebol, uma paixão que também evolui, acompanhe a tecnologia mais atual de grama sintética conosco.</small>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="span3">
+                                <div class="page-header arrow-grey">
+                                    <div class="row">
+                                        <div class="span2">
+                                            <h2>Qualidades</h2>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carouFredSel-vertical mobile-spacing-15" data-nav="popularPosts">
+                                <div class="span3 sidebar-post">
+                                    <div class="picture">
+                                        <a href="#"> <img src="images/gramasintetica/grama-sintetica.jpg"
+										alt="Grama Sintética fácil manutenção" title="Grama Sintética fácil manutenção">
+										<span> <span class="plus"><i class="icon-plus"></i></span> </span> </a>
+                                    </div>
+                                    <p>
+                                        <a href="#">Fácil manutenção e economia</a>
+                                    </p>
+
+                                </div><!-- end post -->
+
+
+
+                                <div class="span3 sidebar-post">
+                                    <div class="picture">
+                                        <a href="#"> <img src="images/gramasintetica/resistencia.jpg" 
+										alt="resistencia da grama" title="resistencia da grama"> <span>
+										<span class="plus"><i class="icon-plus"></i></span> </span> </a>
+                                    </div>
+                                    <p>
+                                        <a href="#">Durabilidade em ambientes hostis </a>
+                                    </p>
+
+                                </div><!-- end post -->
+                                <div class="span3 sidebar-post">
+                                    <div class="picture">
+                                        <a href="#"> <img src="images/gramasintetica/protecao-uv-grama.jpg" alt="Grama com proteção ultra violeta uv" title="Grama com proteção ultra violeta uv"> <span> <span class="plus"><i class="icon-plus"></i></span> </span> </a>
+                                    </div>
+                                    <p>
+                                        <a href="#">Protegidos contra os raios UV e resistente a fortes tormentas</a>
+                                    </p>
+                                </div><!-- end post -->
+
+                            </div>
+
+                        </div>
+						
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="span3">
+                                <div class="page-header arrow-grey">
+                                    <div class="row">
+                                        <div class="span2">
+                                            <h2>Equipe eficiente</h2>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="span3">
+
+                                <div class="carouFredSel" data-nav="featuredWorks">
+                                    <div class="slide">
+                                        <p>
+                                            Compromisso e um serviço bem feito são nosso foco
+                                        </p>
+
+                                        <div class="clearfix"></div>
+
+                                        <div class="thumbnail">
+                                            <div class="picture">
+                                                <a href="images/dummy/portfolio/portfolio_7.jpg" class="add-prettyphoto">
+												<img src="images/dummy/portfolio/portfolio_7.jpg" alt="equipe eficiente" title="compromisso de um bom atendimento">
+												<span> <span class="plus">
+												<i class="icon-plus"></i></span> </span> </a>
+                                            </div>
+                                            <div class="caption-border-bottom">
+                                                <div class="caption">
+                                                    <div class="thumbnail-arrow"></div>
+                                                    <h6>Profissionalismo acima de tudos</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="span3">
+                                <div class="page-header arrow-grey">
+                                    <h2>Origem</h2>
+                                </div>
+                            </div>
+
+                            <div class="span3 push-down-20">
+
+                                <p>
+                                Em 1965, no Estádio Ausdrome, Houston, no Texas foi instalado o primeiro campo inteiramente com grama 
+								sintética, desde então virou febre nos Estados Unidos e Canadá, destacando-se a partir da 
+								década de 70.
+								</p>
+
+                                <a href="contato.html"><button class="btn btn-small btn-green" type="button">
+                                   Orçamento
+                                </button></a>
+
+                            </div>
+
+                        </div>
+                        <!-- end row -->
+
+
+                        <!-- end row -->
+
+                    </div>
+
+                    <!-- end Right Column -->
+
+                </div>
+                <!-- end row -->
+
+            </div>
+            <!-- /container -->
+    	
+ 			<!-- RODA PE -->
+            <div class="foot">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="span3 foot-item foot-item-green">
+                            <div class="foot-item-green-inside">
+                                <img src="images/footer-logo.png" alt=" Logo Futgrass " title=" Logo Futgrass ">
+                                <span class="tel-text">(41) 3082-8850</span>
+                                <span class="support-text">Atendemos todo o Brasil</span>
+<p>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="span3 foot-item">
+                            <h4>Menu Rápido</h4>
+                            <p>
+							<ul>
+                               <li><a href="grama-sintetica-esportiva.html">Grama Esportiva</a></li>
+								<li><a href="grama-sintetica-decorativa.html">Grama Decorativa</a></li>
+								<li><a href="acessorios-esportivos-futebol-volei-basquete.html">Acessórios esportivos</a></li>
+								
+								<li><a href="empresa-futgrass.html">Empresa</a></li>
+							</ul>
+                            </p>
+
+                            <p><br />
+                                
+                            </p>
+                        </div>
+
+                        <div class="span3 foot-item">
+                            <h4>Fifa Quality Concept</h4>
+                            <p>
+                                
+                            </p>
+                           
+                            <p>
+                                <small></small>
+                            </p>
+                        </div>
+
+                        <div class="span3 foot-item">
+                            <h4 class="pull-left">Acompanhamento</h4>
+                            <div class="clearfix"></div>
+                            <ul class="tweet_list">
+                                <li class="tweet_first tweet_odd">
+                                    <span class="tweet_text">Fique inteirado quanto á sua Obra, seu vendedor ficara a disposição para qualquer dúvida de planejamento.</span>
+                                </li>
+                                <li class="tweet_even">
+                                    <span class="tweet_text">É importante para nós que o cliente acompanhe de perto o desenrrolar do seu projeto, mas não se preocupe. Cuidamos de tudo!</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          
+
+            <a id="tothetop" href="#"> </a>
+        </div>
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!--  ==========  -->
+<!--  = Isotope JS =  -->
+<!--  ==========  -->
+<script src="js/isotope/jquery.isotope.min.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = Slider Revolution =  -->
+<!--  ==========  -->
+<script src="js/rs-plugin/pluginsources/jquery.themepunch.plugins.min.js" type="text/javascript"></script>
+<script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = Media Element and mp3 player =  -->
+<!--  ==========  -->
+<script src="js/mediaelementjs-skin/lib/mediaelement.js" type="text/javascript"></script>
+<script src="js/mediaelementjs-skin/lib/mediaelementplayer.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = Carousel CarouFredSel =  -->
+<!--  ==========  -->
+<script src="js/carouFredSel-6.2.1/jquery.carouFredSel-6.2.1-packed.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = prettyPhoto lightbox =  -->
+<!--  ==========  -->
+<script src="js/prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = Style Swithcer =  -->
+<!--  ==========  -->
+<script src="js/styleswitcher/jquery_cookie.js" type="text/javascript"></script>
+<script src="js/styleswitcher/styleswitcher.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = Flickr Feed =  -->
+<!--  ==========  -->
+<script src="js/jflickrfeed/jflickrfeed.min.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = Custom JS =  -->
+<!--  ==========  -->
+<script src="js/custom.js" type="text/javascript" charset="utf-8"></script>
+
+    <!--Start of Tawk.to Script-->
+
+<!--End of Tawk.to Script-->
+<script src="scriptcontato.js"></script></body>
+</html>

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Grama Sintética Usada Comprar, PR, SC, SP, RJ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="stylesheets/bootstrap.css" rel="stylesheet">
+        <link href="stylesheets/responsive.css" rel="stylesheet">
+        <link href="js/rs-plugin/css/settings.css" rel="stylesheet">
+        <link href="stylesheets/main.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon/114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon/114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon/72x72.png">
+        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon/57x57.png">
+        <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="stylescontato.css"><link rel="stylesheet" href="stylescontato.css"></head>
+
+    <body>
+<div class="floating-button">
+  <button id="openModalBtn">Solicitar Orçamento</button>
+</div>
+
+
+<!-- Modal -->
+  <div id="contactModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Solicitar Orçamento</h2>
+        
+        <form action="processa_formulario.php" method="post" id="contact-form">
+          <div class="input-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required pattern="[A-Za-zÀ-ÿ\s]+" title="Somente letras são permitidas">
+          </div>
+          
+          <div class="input-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+          </div>
+          
+          <div class="input-group">
+            <label for="telefone">Telefone</label>
+            <div class="phone-fields">
+              <input type="text" id="ddd" name="ddd" placeholder="DDD" maxlength="2" required pattern="\d{2}" title="Somente números são permitidos">
+              <input type="text" id="telefone" name="telefone" placeholder="Número" maxlength="9" pattern="\d{9}" title="Somente números são permitidos" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="input-group cidade">
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required pattern="[A-Za-zÀ-ÿ\s]+" title="Somente letras são permitidas">
+            </div>
+            <div class="input-group estado">
+              <label for="estado">Estado</label>
+              <input type="text" id="estado" name="estado" placeholder="Digite" maxlength="2" pattern="[A-Za-z]{2}" title="Apenas 2 letras são permitidas" required>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="descricao">Descrição do Orçamento</label>
+            <textarea id="descricao" name="descricao" placeholder="Descreva o serviço ou estrutura metálica que deseja orçar" required></textarea>
+          </div>
+          
+          <!-- Campo Honeypot escondido -->
+          <div style="display:none;">
+            <label for="honeypot">Não preencha este campo se for humano:</label>
+            <input type="text" id="honeypot" name="honeypot">
+          </div>
+          
+          <!-- Campo Oculto para o Temporizador -->
+          <input type="hidden" id="form_loaded_at" name="form_loaded_at" value="">
+          
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+        <!-- STYLESWITCHER HTML -->
+
+        <!-- /STYLESWITCHER HTML -->
+
+        <div class="boxed-container">
+
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-head">
+                    <div class="container">
+                        <div class="header-padding" id="shrinkableHeader">
+                            <div class="row">
+                                <div class="span6">
+                                    <a class="brand" href="index.html" title=""><img src="images/logo.gif" alt="Logo Futgrass"></a>
+                                </div>
+                                <div class="span6">
+                                    <div class="pull-right">
+                                        <div class="call-us">
+                                            CONTATO: (41) 3082-8850
+                                        </div>
+                                        <div class="social">
+                                            <span><a href="https://www.linkedin.com/company/futgrass" class="social-icon-linkedin"></a></span>
+                                            <span><a href="https://www.facebook.com/futgrassgramasintetica" class="social-icon-facebook"></a></span>
+                                            <span><a href="https://www.youtube.com/channel/UC1o47rkgPrYIXjr7dy7LhgA" class="social-icon-youtube"></a></span>
+                                            <span><a href="https://vimeo.com/user38657692" class="social-icon-vimeo"></a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="navbar-menu-line">
+                    <div class="container">
+                        <button type="button" class="btn btn-navbar btn-green" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav" id="mainNavigation">
+                                <li class="divider-vertical"></li>
+                                <li class="dropdown active">
+                                    <a href="index.html"><span>Início</span></a></li>
+
+                                <li class="divider-vertical"></li>
+                                <li>
+                                    <a href="empresa-futgrass.html"><span>Empresa</span><small>melhor atendimento</small></a>
+                                </li>
+                                <li class="divider-vertical"></li>
+                                <li class="dropdown">
+                                    <a href="#"><span>Produtos</span><small>qualidade garantida</small></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="grama-sintetica.html">Grama Sintética</a></li><li><a href="quadra-futebol-grama-sintetica-esportiva.html">Futebol Society</a></li>
+                                        <li>
+                                            <a href="grama-sintetica-esportiva.html">Grama Sintética Esportiva</a>
+                                        </li>
+                                        <li>
+                                            <a href="grama-sintetica-decorativa.html">Grama Sintética Decorativa</a>
+                                        </li>
+                                        <li>
+                                            <a href="alambrado-protecao.html">Alambrados</a>
+                                        </li>
+                                        <li>
+                                            <a href="iluminacao-esportiva-futebol-quadras.html">Iluminação Esportiva</a>
+                                        </li>
+                                        <li>
+                                            <a href="acessorios-esportivos-futebol-volei-basquete.html">Acessorios Esportivos</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="divider-vertical"></li>
+                                <li class="dropdown">
+                                    <a href="http://www.futgrass.com.br/galeria" class="dropdown-toggle"><span>Portfólio</span><small>obras concluídas</small></a>
+
+                                </li>
+                                <li class="divider-vertical"></li>
+                                <li class="dropdown">
+                                    <a href="grama-sintetica-profissional-futebol-empresa.html" class="dropdown-toggle"><span>Grama sintética</span><small>alto padrão</small></a></li>
+                                <li class="divider-vertical"></li>
+                                <li>
+                                    <a href="contato.html"><span>Contato</span><small>aguardando você</small></a>
+                                </li>
+                            </ul>
+
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+    	
+    	    <div class="fullwidthbanner-subpage-container img-slide img-sub-01">
+    	
+    	        <div class="parallax-slider">
+    	        	<div class="container">
+    	        	    <div class="slide">
+    	        	        <h1>Grama Sintética Usada - Comprar, RJ, SP, SC, PR</h1>
+    	        	        <div class="clearfix"></div>
+    	        	        <h2>Qualidade</h2>
+    	        	        <div class="clearfix"></div>
+    	        	        <h2>Garantia.</h2>
+    	        	    </div>
+    	        	</div>
+    	        </div>
+    	
+    	    </div>
+    	    <!-- /fullwidthbanner-container -->
+    	
+    	    <div class="container content page portfolio-single">
+    	
+    	        <div class="row">
+    	            <div class="span9">
+    	
+    	                <div class="row mobile-spacing-35">
+    	
+    	                    <div class="span9">
+    	                        <div class="page-header arrow-grey">
+    	                            <div class="row">
+    	                                <div class="span5">
+    	                                    <h2>Grana Sintética usada</h2>
+    	                                </div>
+    	
+
+    	                            </div>
+    	                        </div>
+    	                    </div>
+    	
+    	                    <div class="span9">
+    	                        <div class="row">
+    	                            <div class="span9">
+    	                                <div class="thumbnail thumbnail-portfolio-single">
+    	                                    <div class="picture picture-url-overlay">
+    	                                        <div class="carouFredSel" data-nav="singleSlider" data-pins="siblings">
+
+    	                                            <div class="slide">
+    	                                                <img src="images/gramasintetica/grama-sintetica-futebol.jpg" alt="Grama Sintética Futebol" tilte="Grama Sintética Futebol">
+    	                                            </div>
+    	                                            <div class="slide">
+    	                                                <img src="images/gramasintetica/grama-sintetica-campo-futebol.jpg" alt="Grama Sintética para campo de futebol" title="Grama Sintética para campo de futebol">
+    	                                            </div>
+    	                                        </div>
+    	                                        <span> <span class="slider-left-overlay"> <span class="slider-left-overlay-inner" id="singleSliderLeft"></span> </span> <span class="slider-right-overlay"> <span class="slider-right-overlay-inner" id="singleSliderRight"></span> </span> </span>
+    	                                        <div class="pins"></div>
+    	                                    </div>
+    	                                    <div class="caption-border-bottom">
+    	                                        <div class="caption caption-arrow">
+    	
+    	                                            <div class="thumbnail-arrow"></div>
+    	                                            <h3>Grama sintética usada</h3>
+    	
+    	                                            <div class="row-fluid">
+    	                                                <div class="span6">
+    	                                                    <p>
+    	                                                        A grama sintética tem vida útil de 10 anos por isso é comum encontrar no mercado <strong>grama sintética usada</strong> para vender, e essa grama mesmo que de segundo uso é de altíssima qualidade, dependendo é claro do tipo da <b>comprar grama sintética usada</b>.
+																</p>
+    	                                                </div>
+    	
+    	                                                <div class="span6">
+    	                                                    <p>
+    	                                                          A Futgrass conta com um estoque razoável de <b>grama sintética usada</b> e oferece por um preço muito atrativo, entre em contato conosco e veja nossas disponibilidades de <b>grama sintética usada</b>.
+    	                                                    </p>
+    	                                                </div>
+    	                                            </div>
+    	
+    	                                            <div class="row-fluid">
+    	                                                <div class="span12">
+    	                                                    <p>
+                                                        Na Europa praticamente todos os campos de futebol oficial são de <strong>grama sintética</strong> e o Brasil vem caminhando a curtos passos para este avanço. Sabemos que a grama sintética natural envolve muitos gastos, entre manutenção gastos e até tempo sem poder usar o gramado para recuperação da grama natural. A <b>grama sintética</b> além de imitar muito a grama natural e tornar o jogo muito mais rápido e competitivo tem um gasto praticamente nulo, por que não precisa de manutenção para manter saudável.</p>
+    	                                                </div>
+    	                                            </div>
+    	
+    	                                            <div class="row-fluid">
+    	                                                <div class="span6">
+    	                                                    <blockquote>
+    	                                                        Economia de água, não é necessária irrigação na grama e isso gera 
+																grande grande economia e a natureza agradece.																
+															</blockquote>
+    	                                                </div>
+    	
+    	                                                <div class="span6">
+    	                                                    <ul class="sharp-arrows">
+    	                                                        <li>
+    	                                                            Um gramado exuberante, todos os dias do ano.
+    	                                                        </li>
+    	                                                        <li>    	                                                            
+																	Não se preocupe com desperdícios de água.
+    	                                                        </li>
+    	                                                        <li>
+    	                                                            Imagine nunca ter que cortar, fertilizar e irrigar.
+    	                                                        </li>
+    	                                                    </ul>
+    	                                                </div>
+    	                                            </div>
+    	
+    	                                            <div class="row-fluid">
+    	                                                <div class="span12">
+    	                                                    <p>    	                                                       
+                                                  A Futgrass vende <strong>grama sintética usada</strong> assim como vende grama sintética nova. Consulte nosso estoque de grama sintética usada e faça um orçamento, atendemos qualquer lugar do Brasil.
+															   </p>
+    	                                                </div>
+    	                                            </div>
+    	
+    	                                            <div class="row-fluid buttons">
+    	                                                <div class="span12">
+    	                                                    <p>
+    	                                                        <button class="btn btn-small btn-green" type="button">
+    	                                                            Contato
+    	                                                        </button>
+    	                                                    </p>
+    	                                                </div>
+    	                                            </div>
+    	
+    	                                            <div class="row-fluid navs-links">
+    	                                                <div class="span12">
+    	                                                    <div class="portfolio-navs pull-left">
+    	                                                        <i class="icon-tags"></i>
+    	                                                        <button class="btn btn-mini" type="button">
+    	                                                           grama sintética decorativa usada
+    	                                                        </button>
+    	                                                        <button class="btn btn-mini" type="button">
+    	                                                            grama sintética esportiva usada
+    	                                                        </button>
+    	                                                        <button class="btn btn-mini" type="button">
+    	                                                            grama sintética para futebol usada
+    	                                                        </button>
+    	                                                        <button class="btn btn-mini" type="button">
+    	                                                            quadra de futebol usada
+    	                                                        </button>
+    	                                                        <button class="btn btn-mini" type="button">
+    	                                                            empresa
+    	                                                        </button>
+    	                                                    </div>
+    	                                                </div>
+    	
+    	                                                <div class="span6">
+    	                                                    <div class="social">
+    	                                                        <!-- AddThis Button BEGIN -->
+    	                                                        <div class="addthis_toolbox addthis_default_style ">
+    	                                                            <a class="addthis_button_facebook_like"></a>
+    	                                                            <a class="addthis_button_tweet"></a>
+    	                                                            <!-- <a class="addthis_counter addthis_pill_style"></a> -->
+    	                                                        </div>
+    	                                                        <script type="text/javascript" src="../../s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51ddb26163f6ae7c"></script>
+    	                                                        <!-- AddThis Button END -->
+    	                                                    </div>
+    	                                                </div>
+    	
+    	                                            </div>
+    	                                        </div>
+    	                                    </div>
+    	                                    <div class="thumbnail-footer">
+    	                                        <div class="pull-left">
+    	                                            <i class="icon-two-columns"></i><a href="#">Grama sintética</a>
+    	                                        </div>
+
+    	                                    </div>
+    	                                </div>
+    	                            </div>
+    	                        </div>
+    	                    </div>
+    	
+    	                </div>
+    	                <!--  TRABALHOS
+    	
+    	                <div class="row">
+    	
+    	                    <div class="span9">
+    	                        <div class="page-header arrow-grey">
+    	                            <div class="row">
+    	                                <div class="span5">
+    	                                    <h2>Related Works</h2>
+    	                                </div>
+    	
+    	                            </div>
+    	                        </div>
+    	                    </div>
+    	
+    	                    <div class="portfolio-related">
+    	                    	<div class="span9">
+    	                    	    <div class="row no-bottom">
+    	                    	        <div class="span3">
+    	                    	            <div class="thumbnail">
+    	                    	                <div class="picture">
+    	                    	                    <a href="images/gramasintetica/portfolio_6.jpg" class="add-prettyphoto"> <img src="images/gramasintetica/portfolio_6.jpg" alt=""> <span> <span class="plus"><i class="icon-plus"></i></span> </span> </a>
+    	                    	                </div>
+    	                    	                <div class="caption-border-bottom">
+    	                    	                    <div class="caption">
+    	                    	                        <div class="thumbnail-arrow"></div>
+    	                    	                        <h6><a href="#">Copiosae molestiae sed</a></h6>
+    	                    	                    </div>
+    	                    	                </div>
+    	                    	            </div>
+    	                    	        </div>
+    	                    	        <div class="span3">
+    	                    	            <div class="thumbnail">
+    	                    	                <div class="picture">
+    	                    	                    <a href="images/gramasintetica/portfolio_2.jpg" class="add-prettyphoto"> <img src="images/gramasintetica/portfolio_2.jpg" alt=""> <span> <span class="plus"><i class="icon-plus"></i></span> </span> </a>
+    	                    	                </div>
+    	                    	                <div class="caption-border-bottom">
+    	                    	                    <div class="caption">
+    	                    	                        <div class="thumbnail-arrow"></div>
+    	                    	                        <h6><a href="#">Graeco mandamus inimi</a></h6>
+    	                    	                    </div>
+    	                    	                </div>
+    	                    	            </div>
+    	                    	        </div>
+    	                    	        <div class="span3">
+    	                    	            <div class="thumbnail">
+    	                    	                <div class="picture picture-url-overlay">
+    	                    	                    <div class="carouFredSel four-columns" data-nav="relatedProj" data-pins="siblings">
+    	                    	                        <div class="slide">
+    	                    	                            <img src="images/gramasintetica/portfolio_7.jpg" alt="">
+    	                    	                        </div>
+    	                    	                        <div class="slide">
+    	                    	                            <img src="images/gramasintetica/portfolio_7.jpg" alt="">
+    	                    	                        </div>
+    	                    	                    </div>
+    	                    	    	
+    	                    	                    <span class="img-overlay img-overlay-slider"> <span class="slider-left-overlay"> <span class="slider-left-overlay-inner" id="relatedProjLeft"></span> </span> <span class="slider-right-overlay"> <span class="slider-right-overlay-inner" id="relatedProjRight"></span> </span> </span>
+    	                    	    	
+    	                    	                    <div class="pins"></div>
+    	                    	                </div>
+    	                    	                <div class="caption-border-bottom">
+    	                    	                    <div class="caption">
+    	                    	                        <div class="thumbnail-arrow"></div>
+    	                    	                        <h6><a href="#">Explicari scribentur pri</a></h6>
+    	                    	                    </div>
+    	                    	                </div>
+    	                    	            </div>
+    	                    	        </div>
+    	                    	    </div>
+    	                    	</div>
+    	                    </div>
+    	
+    	                </div>
+    	                 -->
+    	
+    	            </div>
+    	
+    	            <!-- Right Column -->
+    	
+    	            <div class="span3 right-column">
+    	                <div class="row">
+    	
+    	                    <div class="span3">
+    	                        <div class="page-header arrow-grey">
+    	                            <h2>Grama Sintética Usada</h2>
+    	                        </div>
+    	                    </div>
+    	
+    	                    <div class="span3 push-down-20">
+    	
+    	                        <p>
+    	                            A <b>grama sintética</b> é um “tapete” de fibras sintéticas desenvolvido especialmente para tornar-se o mais próximo possível da grama natural, normalmente usada para esportes. Porém, está sendo muito adotada em gramados
+									residenciais bem como aplicações comerciais devidos a suas inúmeras vantagens. </p>
+    	
+    	                        <button class="btn btn-small btn-green" type="button">
+    	                             Orçamento
+    	                        </button>
+    	
+    	                    </div>
+    	
+    	                </div>
+    	                <!-- end row -->
+    	
+    	                <div class="row">
+    	
+    	                    <div class="span3">
+    	                        <div class="page-header arrow-grey no-bottom-margin">
+    	                            <h2>Categorias</h2>
+    	                        </div>
+    	                    </div>
+    	
+    	                    <div class="span3">
+    	
+    	                        <nav class="categories">
+    	                            <ul>
+    	                                <li>
+    	                                    <a href="grama-sintetica-esportiva.html">Esportiva</a>
+    	                                </li>
+    	                                <li>
+    	                                    <a href="grama-sintetica-decorativa.html">Decorativa</a>
+    	                                </li>
+
+    	                            </ul>
+    	                        </nav>
+    	
+    	                    </div>
+    	
+    	                </div>
+    	                <!-- end row -->
+    	
+    	                <div class="row">
+    	
+    	                    <div class="span3">
+    	                        <div class="page-header arrow-grey">
+    	                            <div class="row">
+    	                                <div class="span2">
+    	                                    <h2>Qualidades</h2>
+    	                                </div>
+    	                            </div>
+    	                        </div>
+    	                    </div>
+    	
+	                        <div class="carouFredSel-vertical" data-nav="popularPosts">
+                                <div class="span3 sidebar-post">
+                                    <div class="picture">
+                                        <a href="#"> <img src="images/gramasintetica/grama-sintetica.jpg" alt="Grama Sintética fácil manutenção" title="Grama Sintética fácil manutenção"> <span> <span class="plus"><i class="icon-plus"></i></span> </span> </a>
+                                    </div>
+                                    <p>
+                                        <a href="#">Fácil manutenção e economia</a>
+                                    </p>
+
+                                </div><!-- end post -->
+
+
+
+                                <div class="span3 sidebar-post">
+                                    <div class="picture">
+                                        <a href="#"> <img src="images/gramasintetica/resistencia.jpg" alt="resistencia da grama" title="resistencia da grama"> <span> <span class="plus"><i class="icon-plus"></i></span> </span> </a>
+                                    </div>
+                                    <p>
+                                        <a href="#">Durabilidade em ambientes hostis </a>
+                                    </p>
+
+                                </div><!-- end post -->
+                                <div class="span3 sidebar-post">
+                                    <div class="picture">
+                                        <a href="#"> <img src="images/gramasintetica/protecao-uv-grama.jpg" alt="Grama com proteção ultra violeta uv" title="Grama com proteção ultra violeta uv"> <span> <span class="plus"><i class="icon-plus"></i></span> </span> </a>
+                                    </div>
+                                    <p>
+                                        <a href="#">Protegidos contra os raios UV e resistente a fortes tormentas</a>
+                                    </p>
+                                </div><!-- end post -->
+                            </div>
+							 <div class="carouFredSel-vertical" data-nav="popularPosts">
+                                
+
+                                <div class="span3 sidebar-post">
+                                    <div class="picture">
+                                        <a href="#"> <img src="images/gramasintetica/tecnologia-grama-sintetica.jpg" alt="Alta Tecnologia" title="Alta Tecnologia"> <span> <span class="plus"><i class="icon-plus"></i></span> </span> </a>
+                                    </div>
+                                    <p>
+                                        <a href="#">Grama de alta tecnologia, somente o melhor para nossos clientes</a>
+                                    </p>
+
+                                </div><!-- end post -->
+
+                                <div class="span3 sidebar-post">
+                                    <div class="picture">
+                                        <a href="#"> <img src="images/gramasintetica/seguranca-para-animais.jpg" alt="Segurança para seu bichinho grama sintética" title="Segurança para seu bichinho grama sintética"> <span> <span class="plus"><i class="icon-plus"></i></span> </span> </a>
+                                    </div>
+                                    <p>
+                                        <a href="#">Superfície mais segura para crianças e animais de estimação</a>
+                                    </p>
+                                </div><!-- end post -->
+
+                            </div>
+    	
+    	                </div>
+    	                <!-- end row -->
+    	            </div>
+    	
+    	            <!-- end Right Column -->
+    	
+    	        </div>
+    	        <!-- end row -->
+    	
+    	    </div>
+    	    <!-- /container -->
+    	
+ 			<!-- RODA PE -->
+            <div class="foot">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="span3 foot-item foot-item-green">
+                            <div class="foot-item-green-inside">
+                                <img src="images/footer-logo.png" alt=" Logo Futgrass " title=" Logo Futgrass ">
+                                <span class="tel-text">(41) 3082-8850</span>
+                                <span class="support-text">Atendemos todo o Brasil</span>
+<p>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="span3 foot-item">
+                            <h4>Menu Rápido</h4>
+                            <p>
+							<ul>
+                               <li><a href="grama-sintetica-esportiva.html">Grama Esportiva</a></li>
+								<li><a href="grama-sintetica-decorativa.html">Grama Decorativa</a></li>
+								<li><a href="acessorios-esportivos-futebol-volei-basquete.html">Acessórios esportivos</a></li>
+								
+								<li><a href="empresa-futgrass.html">Empresa</a></li>
+							</ul>
+                            </p>
+
+                            <p><br />
+                                
+                            </p>
+                        </div>
+
+                        <div class="span3 foot-item">
+                            <h4>Fifa Quality Concept</h4>
+                            <p>
+                                
+                            </p>
+                           
+                            <p>
+                                <small></small>
+                            </p>
+                        </div>
+
+                        <div class="span3 foot-item">
+                            <h4 class="pull-left">Acompanhamento</h4>
+                            <div class="clearfix"></div>
+                            <ul class="tweet_list">
+                                <li class="tweet_first tweet_odd">
+                                    <span class="tweet_text">Fique inteirado quanto á sua Obra, seu vendedor ficara a disposição para qualquer dúvida de planejamento.</span>
+                                </li>
+                                <li class="tweet_even">
+                                    <span class="tweet_text">É importante para nós que o cliente acompanhe de perto o desenrrolar do seu projeto, mas não se preocupe. Cuidamos de tudo!</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          
+
+            <a id="tothetop" href="#"> </a>
+        </div>
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!--  ==========  -->
+<!--  = Isotope JS =  -->
+<!--  ==========  -->
+<script src="js/isotope/jquery.isotope.min.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = Slider Revolution =  -->
+<!--  ==========  -->
+<script src="js/rs-plugin/pluginsources/jquery.themepunch.plugins.min.js" type="text/javascript"></script>
+<script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = Media Element and mp3 player =  -->
+<!--  ==========  -->
+<script src="js/mediaelementjs-skin/lib/mediaelement.js" type="text/javascript"></script>
+<script src="js/mediaelementjs-skin/lib/mediaelementplayer.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = Carousel CarouFredSel =  -->
+<!--  ==========  -->
+<script src="js/carouFredSel-6.2.1/jquery.carouFredSel-6.2.1-packed.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = prettyPhoto lightbox =  -->
+<!--  ==========  -->
+<script src="js/prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = Style Swithcer =  -->
+<!--  ==========  -->
+<script src="js/styleswitcher/jquery_cookie.js" type="text/javascript"></script>
+<script src="js/styleswitcher/styleswitcher.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = Flickr Feed =  -->
+<!--  ==========  -->
+<script src="js/jflickrfeed/jflickrfeed.min.js" type="text/javascript"></script>
+
+<!--  ==========  -->
+<!--  = Custom JS =  -->
+<!--  ==========  -->
+<script src="js/custom.js" type="text/javascript" charset="utf-8"></script>
+
+    <!--Start of Tawk.to Script-->
+
+<!--End of Tawk.to Script-->
+<script src="scriptcontato.js"></script></body>
+</html>
