@@ -20,10 +20,18 @@ function is_ajax_request() {
            strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
 }
 
+// Função para registrar logs
+function log_error($message) {
+    $log_file = 'error_log.txt';
+    $current_time = date('Y-m-d H:i:s');
+    $message = "[{$current_time}] ERROR: {$message}\n";
+    file_put_contents($log_file, $message, FILE_APPEND);
+}
+
 // Conectar ao primeiro banco de dados
 $servidor1 = "162.214.145.189";
 $usuario1 = "empre028_felipe";
-$senha1 = "Iuh86gwt--@Z123"; // **ATENÇÃO:** Alterar imediatamente
+$senha1 = "Iuh86gwt--@Z123"; 
 $banco1 = "empre028_futgrass";
 $conexao1 = new mysqli($servidor1, $usuario1, $senha1, $banco1);
 
@@ -36,12 +44,12 @@ $conexao2 = new mysqli($servidor2, $usuario2, $senha2, $banco2);
 
 // Verifica se a conexão foi bem-sucedida com ambos os bancos
 if ($conexao1->connect_error) {
-    error_log("Erro na conexão com o banco 1: " . $conexao1->connect_error);
+    log_error("Erro na conexão com o banco 1: " . $conexao1->connect_error);
     die("Erro na conexão com o banco 1.");
 }
 
 if ($conexao2->connect_error) {
-    error_log("Erro na conexão com o banco 2: " . $conexao2->connect_error);
+    log_error("Erro na conexão com o banco 2: " . $conexao2->connect_error);
     die("Erro na conexão com o banco 2.");
 }
 
@@ -63,12 +71,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $honeypot = sanitizar(isset($_POST['honeypot']) ? $_POST['honeypot'] : '');
     $form_loaded_at = isset($_POST['form_loaded_at']) ? intval($_POST['form_loaded_at']) : 0;
 
-    error_log("Dados recebidos do formulário: Nome=$nome, Email=$email, Telefone=($ddd) $telefone, Cidade=$cidade, Estado=$estado, Descrição=$descricao");
+    log_error("Dados recebidos do formulário: Nome=$nome, Email=$email, Telefone=($ddd) $telefone, Cidade=$cidade, Estado=$estado, Descrição=$descricao");
 
     // Verificação do Honeypot
     if (!empty($honeypot)) {
-        // Submissão suspeita de bot
-        error_log("Honeypot detectado. Submissão bloqueada.");
+        log_error("Honeypot detectado. Submissão bloqueada.");
         header('Location: https://futgrass.com.br/sucesso');
         exit();
     }
@@ -78,14 +85,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $time_diff = ($current_time - $form_loaded_at) / 1000; // diferença em segundos
 
     if ($form_loaded_at == 0 || $time_diff < 5) {
-        error_log("Submissão suspeita de bot. Tempo de submissão muito rápido.");
+        log_error("Submissão suspeita de bot. Tempo de submissão muito rápido.");
         header('Location: https://futgrass.com.br/sucesso');
         exit();
     }
 
     // Validação básica dos campos
     if (empty($nome) || empty($email) || empty($ddd) || empty($telefone) || empty($cidade) || empty($estado) || empty($descricao)) {
-        error_log("Campos obrigatórios ausentes.");
+        log_error("Campos obrigatórios ausentes.");
         if (is_ajax_request()) {
             header('Content-Type: application/json');
             echo json_encode(['status' => 'error', 'message' => 'Todos os campos são obrigatórios.']);
@@ -97,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Validação do formato do e-mail
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        error_log("E-mail inválido: $email");
+        log_error("E-mail inválido: $email");
         if (is_ajax_request()) {
             header('Content-Type: application/json');
             echo json_encode(['status' => 'error', 'message' => 'Endereço de e-mail inválido.']);
@@ -121,14 +128,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Prepara a inserção no primeiro banco
     $stmt1 = $conexao1->prepare($sql1);
     if (!$stmt1) {
-        error_log("Erro ao preparar a consulta no banco 1: " . $conexao1->error);
+        log_error("Erro ao preparar a consulta no banco 1: " . $conexao1->error);
         die("Erro ao preparar a consulta no banco 1.");
     }
 
     // Prepara a inserção no segundo banco
     $stmt2 = $conexao2->prepare($sql2);
     if (!$stmt2) {
-        error_log("Erro ao preparar a consulta no banco 2: " . $conexao2->error);
+        log_error("Erro ao preparar a consulta no banco 2: " . $conexao2->error);
         die("Erro ao preparar a consulta no banco 2.");
     }
 
@@ -138,12 +145,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Executa as inserções
     if ($stmt1->execute() && $stmt2->execute()) {
-        error_log("Inserção bem-sucedida nos dois bancos.");
+        log_error("Inserção bem-sucedida nos dois bancos.");
 
         // Envio do e-mail somente se os dados forem inseridos com sucesso nos dois bancos
         $mail = new PHPMailer(true);
         try {
             // Configurações do servidor SMTP
+            $mail->SMTPDebug = 2; // Adiciona logs detalhados de depuração
+            $mail->Debugoutput = 'error_log'; // Redireciona o debug para o log de erros
             $mail->isSMTP();
             $mail->Host       = 'mail.embrafer.com';
             $mail->SMTPAuth   = true;
@@ -176,13 +185,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             ";
 
             // Envia o e-mail
-            $mail->send();
+            if ($mail->send()) {
+                log_error("E-mail enviado com sucesso.");
+                header('Location: https://futgrass.com.br/sucesso');
+                exit();
+            } else {
+                log_error("Erro ao enviar e-mail: " . $mail->ErrorInfo);
+            }
 
-            error_log("E-mail enviado com sucesso.");
-            header('Location: https://futgrass.com.br/sucesso');
-            exit();
         } catch (Exception $e) {
-            error_log("Erro ao enviar e-mail: " . $e->getMessage());
+            log_error("Erro ao enviar e-mail: " . $e->getMessage());
             if (is_ajax_request()) {
                 header('Content-Type: application/json');
                 echo json_encode(['status' => 'error', 'message' => 'Erro ao enviar e-mail.']);
@@ -192,7 +204,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             exit();
         }
     } else {
-        error_log("Erro ao inserir dados no banco de dados: Banco 1: " . $stmt1->error . ", Banco 2: " . $stmt2->error);
+        log_error("Erro ao inserir dados no banco de dados: Banco 1: " . $stmt1->error . ", Banco 2: " . $stmt2->error);
         die("Erro ao inserir dados no banco de dados.");
     }
 
